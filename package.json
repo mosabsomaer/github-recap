@@ -1,0 +1,36 @@
+{
+  "name": "github-recap",
+  "version": "1.0.0",
+  "description": "Libyan Developer Ecosystem Recap - GitHub Data Collector",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "github-recap": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "sync": "tsx src/cli.ts sync",
+    "sync:users": "tsx src/cli.ts sync users",
+    "sync:repos": "tsx src/cli.ts sync repos",
+    "sync:contributions": "tsx src/cli.ts sync contributions",
+    "status": "tsx src/cli.ts status",
+    "reset": "tsx src/cli.ts reset",
+    "analyze": "tsx src/cli.ts analyze",
+    "add-user": "tsx src/cli.ts add-user",
+    "clean:analyze": "tsx src/clean-locations.ts analyze",
+    "clean:remove": "tsx src/clean-locations.ts remove"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

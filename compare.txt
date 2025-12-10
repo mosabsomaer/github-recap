@@ -1,0 +1,101 @@
+1. Linux Kernel
+
+Repo: https://github.com/torvalds/linux
+
+Commits: ~1,150,000+
+
+Holy level: GOD TIER
+
+Cool comparison:
+
+161,986 contributions is the same as 14% of the entire Linux kernel history.
+
+2. Homebrew
+
+Repo: https://github.com/Homebrew/brew
+
+Commits: ~33,000+
+
+3. Kubernetes
+
+Repo: https://github.com/kubernetes/kubernetes
+
+Commits: ~100,000+
+
+Comparison:
+
+Libyan devs produced the equivalent of 1.6× the entire Kubernetes repo in one year.
+
+4. React
+
+Repo: https://github.com/facebook/react
+
+Commits: ~33,000+
+
+5. TypeScript
+
+Repo: https://github.com/microsoft/TypeScript
+
+Commits: ~36,000+
+
+Comparison:
+
+161,986 contributions = 4.4× building TypeScript from scratch.
+
+6. VS Code
+
+Repo: https://github.com/microsoft/vscode
+
+Commits: ~70,000+
+
+Comparison:
+
+That’s more than 2× the entire VS Code codebase in one year.
+
+7. TensorFlow
+
+Repo: https://github.com/tensorflow/tensorflow
+
+Commits: ~60,000+
+
+8. Chromium / Chrome
+
+Repo: https://chromium.googlesource.com/chromium/src
+
+Commits: ~400,000+
+
+(Chromium is not on GitHub but insane scale.)
+
+9. Godot Engine
+
+Repo: https://github.com/godotengine/godot
+
+Commits: ~40,000+
+
+10. Django
+
+Repo: https://github.com/django/django
+
+Commits: ~31,000+
+
+🔥 READY-TO-USE SENTENCES FOR YOUR REPORT
+Option A (strong)
+
+Libyan developers produced 161,986 contributions this year —
+that’s 4× the entire TypeScript project, or nearly 2 full copies of VS Code.
+
+Option B (epic)
+
+Libya’s 2025 developer activity equals 14% of the entire Linux kernel’s commit history.
+That’s a massive output for a small community.
+
+Option C (fun)
+
+161k contributions =
+4.4 TypeScript repos
+2.3 VS Code repos
+1.6 Kubernetes repos
+
+Option D (simple)
+
+This year, Libyan devs built the equivalent of four TypeScripts worth of work.
