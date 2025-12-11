@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.font-pixel {
+  font-family: "Press Start 2P", monospace;
+}
+
+.font-orbitron {
+  font-family: "Inter", sans-serif;
+}

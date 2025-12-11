@@ -2,9 +2,9 @@
  * Analysis Script - Generates recap2025.json with all computed metrics
  */
 
-import { SyncState } from './sync-state.js';
 import fs from 'fs/promises';
 import path from 'path';
+import { SyncState } from './sync-state.js';
 
 const CUTOFF_2025 = new Date('2025-01-01');
 const OUTPUT_FILE = path.join(process.cwd(), 'data', 'analysis', 'recap2025.json');
@@ -47,7 +47,6 @@ activity: {
   };
   funStats: {
     mostProductiveMonth: string;
-    totalActiveDevs: number;
     epicComparisons: string[];
   };
   interestingFacts: {
@@ -336,7 +335,6 @@ export async function analyze(): Promise<Recap2025> {
     },
     funStats: {
       mostProductiveMonth: peakMonth,
-      totalActiveDevs: activeUsers.length,
       epicComparisons,
     },
     interestingFacts: {
@@ -398,7 +396,6 @@ function printSummary(recap: Recap2025): void {
   console.log(`   Most Active Month: ${recap.activity.peakMonth}`);
 
   console.log('\n🎯 Fun Stats:');
-  console.log(`   Total Active Devs: ${recap.funStats.totalActiveDevs}`);
   console.log(`   Most Productive Month: ${recap.funStats.mostProductiveMonth}`);
 
   console.log('\n🔍 Interesting Facts:');
