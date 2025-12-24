@@ -3,11 +3,14 @@ import { FaChartBar, FaChevronLeft, FaChevronRight, FaCode, FaGithub, FaStar } f
 import Slide1 from './slides/Slide1';
 import Slide2 from './slides/Slide2';
 import Slide3 from './slides/Slide3';
+import Slide4 from './slides/Slide4';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const totalSlides = 4;
 
   useEffect(() => {
     if (videoRef.current) {
@@ -15,6 +18,22 @@ function App() {
     }
     audioRef.current = new Audio('/select-button-ui-395763.mp3');
     audioRef.current.volume = 0.5;
+  }, []);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        playSound();
+        setCurrentSlide((prev) => (prev + 1) % totalSlides);
+      } else if (e.key === 'ArrowLeft') {
+        playSound();
+        setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const playSound = () => {
@@ -33,9 +52,11 @@ const slideColors = [
 ];
 
   const slides = [
-    { component: <Slide1 />, icon: FaStar },
-    { component: <Slide2 />, icon: FaCode },
-    { component: <Slide3 />, icon: FaChartBar },
+    { component: <Slide1 color={slideColors[currentSlide]} />, icon: FaStar },
+    { component: <Slide2 color={slideColors[currentSlide]}/>, icon: FaCode },
+    { component: <Slide3 color={slideColors[currentSlide]}/>, icon: FaChartBar },
+    { component: <Slide4 color={slideColors[currentSlide]}/>, icon: FaChartBar },
+
   ];
 
   const nextSlide = () => {
@@ -74,10 +95,10 @@ const slideColors = [
       </div>
 
       <div className="absolute inset-0 z-10 flex flex-col">
-        <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-6">
-          <div className="w-1/3"></div>
-
-          <div className="flex items-center justify-center w-1/3 gap-3 md:gap-4">
+        {/* Header with slides in center and branding top-right */}
+        <div className="relative w-full py-6">
+          {/* Slide indicators - centered */}
+          <div className="absolute left-1/2 top-6 -translate-x-1/2 flex items-center gap-3 md:gap-4">
             {slides.map((slide, index) => {
               const Icon = slide.icon;
               const isCurrent = index === currentSlide;
@@ -87,13 +108,13 @@ const slideColors = [
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className="transition-all duration-300"
+                  className="transition-all duration-100 active:scale-95"
                 >
                   {isPast || isCurrent ? (
-                    <div className={`p-3 cursor-pointer rounded-lg transition-all duration-300 ${
+                    <div className={`cursor-pointer border-2 size-10 md:size-12 flex items-center justify-center rounded-full transition-all duration-100 ${
                       isCurrent
-                        ? 'opacity-100 scale-110'
-                        : 'opacity-60 scale-100'
+                        ? 'opacity-100'
+                        : 'opacity-60'
                     }`}
                     style={{
                       backgroundColor: isCurrent ? `${slideColors[currentSlide]}40` : 'rgba(10, 14, 39, 0.4)',
@@ -105,42 +126,56 @@ const slideColors = [
                         style={{ color: isCurrent ? slideColors[currentSlide] : `${slideColors[currentSlide]}70` }} />
                     </div>
                   ) : (
-                    <div className="transition-all duration-300 border rounded-full size-8 md:w-10 md:h-10 bg-retro-dark/20 opacity-40"
-                      style={{ borderColor: `${slideColors[currentSlide]}30` }}></div>
+                    <div className="transition-all duration-100 border-2 rounded-full cursor-pointer size-10 md:size-12"
+                      style={{ borderColor: `${slideColors[currentSlide]}40` }}></div>
                   )}
                 </button>
               );
             })}
           </div>
 
-          <div className="flex items-center justify-end w-1/3 gap-2 md:gap-3">
+          {/* Branding - top right */}
+          <div className="absolute top-6 right-6 md:right-10 flex items-center gap-2 md:gap-3">
             <FaGithub className="text-xl transition-colors duration-700 md:text-2xl" style={{ color: slideColors[currentSlide] }} />
             <span className="font-pixel text-[8px] md:text-xs leading-tight hidden sm:block transition-colors duration-700" style={{ color: slideColors[currentSlide] }}>
-              LIBYAN<br/>DEVELOPER<br/>RECAP
+              DEVELOPER<br/>RECAP<br/>LIBYAN
             </span>
           </div>
         </div>
 
         <div className="flex items-center justify-center flex-1 px-4 md:px-10">
-          <div className="w-[90%] h-[70%] md:w-[80%] md:h-[70%] lg:w-[70%] lg:h-[70%] bg-retro-dark/80 backdrop-blur-lg rounded-2xl border-2 border-retro-purple/30 shadow-2xl shadow-retro-purple/20 p-6 md:p-10 lg:p-16 overflow-auto">
+          <div className="w-[90%] h-[70%] md:w-[80%] md:h-[70%] lg:w-[70%] lg:h-[70%] p-6 md:p-10 lg:p-16 overflow-auto">
             {slides[currentSlide].component}
           </div>
         </div>
 
+        {/* Navigation buttons */}
         <button
           onClick={prevSlide}
-          className="fixed z-20 p-4 transition-all duration-300 border-2 cursor-pointer group bottom-10 left-10 md:p-5 active:scale-95"
-          style={{ borderColor: slideColors[currentSlide], color: slideColors[currentSlide] }}
+          className="fixed z-20 p-6 md:p-8 transition-all duration-100 border-2 cursor-pointer bottom-8 left-8 md:bottom-12 md:left-12
+            active:scale-95 active:brightness-110 backdrop-blur-sm"
+          style={{
+            borderColor: slideColors[currentSlide],
+            color: slideColors[currentSlide],
+            backgroundColor: `${slideColors[currentSlide]}15`,
+            boxShadow: `0 0 25px ${slideColors[currentSlide]}30`
+          }}
         >
-          <FaChevronLeft className="text-2xl transition-transform group-hover:scale-110" />
+          <FaChevronLeft className="text-3xl md:text-4xl" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="fixed z-20 p-4 transition-all duration-300 border-2 cursor-pointer group bottom-10 right-10 md:p-5 active:scale-95"
-          style={{ borderColor: slideColors[currentSlide], color: slideColors[currentSlide] }}
+          className="fixed z-20 p-6 md:p-8 transition-all duration-100 border-2 cursor-pointer bottom-8 right-8 md:bottom-12 md:right-12
+            active:scale-95 active:brightness-110 backdrop-blur-sm"
+          style={{
+            borderColor: slideColors[currentSlide],
+            color: slideColors[currentSlide],
+            backgroundColor: `${slideColors[currentSlide]}15`,
+            boxShadow: `0 0 25px ${slideColors[currentSlide]}30`
+          }}
         >
-          <FaChevronRight className="text-2xl transition-transform group-hover:scale-110" />
+          <FaChevronRight className="text-3xl md:text-4xl" />
         </button>
       </div>
     </div>
