@@ -10,6 +10,23 @@ let nr = function() {
     return Math.random() * 2 - 1;
 }
 
+// Parse config from URL params
+function getConfig() {
+    const params = new URLSearchParams(window.location.search);
+    const configParam = params.get('config');
+
+    if (configParam) {
+        try {
+            return JSON.parse(atob(configParam));
+        } catch (e) {
+            console.error('Failed to parse config:', e);
+        }
+    }
+}
+
+// Global config - will be set in init()
+let simulationConfig = null;
+
 // let myWorker = new Worker('worker.js');
 
 let imagePath = "fd3.jpg";
@@ -59,6 +76,9 @@ let kDown = false;
 
 
 function init() {
+    // Get config from URL params
+    simulationConfig = getConfig();
+
     var c    = document.getElementById("canvas");
     c.width  = canvasSize;
     c.height = canvasSize;
@@ -67,54 +87,39 @@ function init() {
     ctx = c.getContext("2d");
     ctx.save();
 
-
-
-    
-    // Get day of week from date string
-    function getDayOfWeek(dateStr) {
-        const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-        const date = new Date(dateStr + 'T00:00:00');
-        return days[date.getDay()];
-    }
-
-    // Draw text with data
-    function renderText(mostProductive, laziest) {
-        // White background (inverted)
+    // Render content based on config type
+    function renderContent(config) {
+        // White background (inverted - text areas will be dark for smaller boxes)
         ctx.fillStyle = "white";
         ctx.fillRect(0, 0, canvasSize, canvasSize);
 
         ctx.fillStyle = "black";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-
-        const centerX = canvasSize / 2;
         ctx.strokeStyle = "black";
 
-        const topDay = getDayOfWeek(mostProductive.date);
-        const bottomDay = getDayOfWeek(laziest.date);
+        const centerX = canvasSize / 2;
 
-        // Top section - Most Productive Day (no date, just day name and number)
-        ctx.font = "100 120px Orbitron";
-        ctx.lineWidth = 20;
-        ctx.letterSpacing = "10px";  // Positive = more space, negative = tighter
-        ctx.fillText(topDay, centerX, 130);
-        ctx.strokeText(topDay, centerX, 130);
+        if (config.type === "text" && config.lines) {
+            // Render each text line
+            for (const line of config.lines) {
+                const fontSize = line.fontSize;
+                const fontWeight = line.fontWeight;
+                const yPos = (line.y || 0.5) * canvasSize;
+                const lineWidth = line.lineWidth;
+                const letterSpacing = line.letterSpacing;
 
-        ctx.font = "300 380px Orbitron";
-        ctx.lineWidth = 30;
-        ctx.fillText(String(mostProductive.contributions), centerX, 380);
-        ctx.strokeText(String(mostProductive.contributions), centerX, 380);
-
-        // Bottom section - Laziest Day (no date, just day name and number)
-        ctx.font = "100 140px Orbitron";
-        ctx.lineWidth = 20;
-        ctx.fillText(bottomDay, centerX, 640);
-        ctx.strokeText(bottomDay, centerX, 640);
-
-        ctx.font = "300 380px Orbitron";
-        ctx.lineWidth = 30;
-        ctx.fillText(String(laziest.contributions), centerX, 880);
-        ctx.strokeText(String(laziest.contributions), centerX, 880);
+                ctx.font = `${fontWeight} ${fontSize}px Orbitron`;
+                ctx.lineWidth = lineWidth;
+                ctx.letterSpacing = letterSpacing;
+                ctx.fillText(line.text, centerX, yPos);
+                ctx.strokeText(line.text, centerX, yPos);
+            }
+        } else if (config.type === "image" && config.imageSrc) {
+            // Image support - structure only, to be implemented
+            console.log("Image rendering not yet implemented. imageSrc:", config.imageSrc);
+            // Future: load image and draw to canvas
+        }
 
         imageData = ctx.getImageData(0, 0, canvasSize, canvasSize);
 
@@ -122,13 +127,9 @@ function init() {
         ctx.scale(1, -1);
     }
 
-    // Data from recap2025.json interestingFacts
-    const mostProductive = { date: "2025-09-10", contributions: 886 };
-    const laziest = { date: "2025-06-06", contributions: 158 };
-
     // Wait for font to load
     document.fonts.ready.then(() => {
-        renderText(mostProductive, laziest);
+        renderContent(simulationConfig);
 
 
 
@@ -458,7 +459,7 @@ class Circle {
     }
 
     draw() {
-        ctx.strokeStyle = "#00F5D4"; // Mint
+        ctx.strokeStyle = simulationConfig?.color;
         ctx.lineWidth = 1;
 
         // Draw square

@@ -143,10 +143,8 @@ const slideColors = [
           </div>
         </div>
 
-        <div className="flex items-center justify-center flex-1 px-4 md:px-10">
-          <div className="w-[90%] h-[70%] md:w-[80%] md:h-[70%] lg:w-[70%] lg:h-[70%] p-6 md:p-10 lg:p-16 overflow-auto">
-            {slides[currentSlide].component}
-          </div>
+        <div className="flex items-center justify-center flex-1 w-full h-full">
+          {slides[currentSlide].component}
         </div>
 
         {/* Navigation buttons */}

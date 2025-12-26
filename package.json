@@ -25,8 +25,10 @@
     "clean:remove": "tsx src/clean-locations.ts remove"
   },
   "dependencies": {
+    "@types/d3": "^7.4.3",
     "@vitejs/plugin-react": "^5.1.2",
     "commander": "^12.1.0",
+    "d3": "^7.9.0",
     "dotenv": "^16.4.5",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
