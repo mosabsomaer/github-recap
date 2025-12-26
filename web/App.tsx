@@ -1,16 +1,26 @@
 import { useEffect, useRef, useState } from 'react';
-import { FaChartBar, FaChevronLeft, FaChevronRight, FaCode, FaGithub, FaStar } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaCode, FaGithub, FaStar } from 'react-icons/fa';
+import { LuBoxes } from "react-icons/lu";
+import { MdLeaderboard, MdOutlineSubtitles } from "react-icons/md";
+import { RiBubbleChartFill } from "react-icons/ri";
 import Slide1 from './slides/Slide1';
+import Slide10 from './slides/Slide10';
+import Slide11 from './slides/Slide11';
 import Slide2 from './slides/Slide2';
 import Slide3 from './slides/Slide3';
 import Slide4 from './slides/Slide4';
+import Slide5 from './slides/Slide5';
+import Slide6 from './slides/Slide6';
+import Slide7 from './slides/Slide7';
+import Slide8 from './slides/Slide8';
+import Slide9 from './slides/Slide9';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const totalSlides = 4;
+  const totalSlides = 11;
 
   useEffect(() => {
     if (videoRef.current) {
@@ -24,10 +34,16 @@ function App() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight') {
-        playSound();
+        if (audioRef.current) {
+          audioRef.current.currentTime = 0;
+          audioRef.current.play().catch(err => console.log('Audio play failed:', err));
+        }
         setCurrentSlide((prev) => (prev + 1) % totalSlides);
       } else if (e.key === 'ArrowLeft') {
-        playSound();
+        if (audioRef.current) {
+          audioRef.current.currentTime = 0;
+          audioRef.current.play().catch(err => console.log('Audio play failed:', err));
+        }
         setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
       }
     };
@@ -44,19 +60,31 @@ function App() {
   };
 
 const slideColors = [
-  '#0096FF', // Blue
-  '#FF006E', // Pink
-  '#FFBE0B', // Yellow
-  '#00F5D4', // Mint
-  '#06D6A0'  // Green
+  '#0096FF', // Blue - Slide 1
+  '#FF006E', // Pink - Slide 2
+  '#FFBE0B', // Yellow - Slide 3 (title)
+  '#FFBE0B', // Yellow - Slide 4 (chart)
+  '#00F5D4', // Mint - Slide 5 (title)
+  '#00F5D4', // Mint - Slide 6 (chart)
+  '#O096FF', // Blue - Slide 7
+  '#FF006E', // Pink - Slide 8
+  '#FFBE0B', // Yellow - Slide 9
+  '#FFBE0B', // Yellow - Slide 10
+  '#00F5D4', // Mint - Slide 11
 ];
 
   const slides = [
     { component: <Slide1 color={slideColors[currentSlide]} />, icon: FaStar },
     { component: <Slide2 color={slideColors[currentSlide]}/>, icon: FaCode },
-    { component: <Slide3 color={slideColors[currentSlide]}/>, icon: FaChartBar },
-    { component: <Slide4 color={slideColors[currentSlide]}/>, icon: FaChartBar },
-
+    { component: <Slide3 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
+    { component: <Slide4 color={slideColors[currentSlide]}/>, icon: RiBubbleChartFill },
+    { component: <Slide5 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
+    { component: <Slide6 color={slideColors[currentSlide]}/>, icon: LuBoxes },
+    { component: <Slide7 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
+    { component: <Slide8 color={slideColors[currentSlide]}/>, icon: MdLeaderboard },
+    { component: <Slide9 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
+    { component: <Slide10 color={slideColors[currentSlide]}/>, icon: RiBubbleChartFill },
+    { component: <Slide11 color={slideColors[currentSlide]}/>, icon: LuBoxes },
   ];
 
   const nextSlide = () => {
@@ -98,7 +126,7 @@ const slideColors = [
         {/* Header with slides in center and branding top-right */}
         <div className="relative w-full py-6">
           {/* Slide indicators - centered */}
-          <div className="absolute left-1/2 top-6 -translate-x-1/2 flex items-center gap-3 md:gap-4">
+          <div className="absolute flex items-center gap-3 -translate-x-1/2 left-1/2 top-6 md:gap-4">
             {slides.map((slide, index) => {
               const Icon = slide.icon;
               const isCurrent = index === currentSlide;
@@ -135,7 +163,7 @@ const slideColors = [
           </div>
 
           {/* Branding - top right */}
-          <div className="absolute top-6 right-6 md:right-10 flex items-center gap-2 md:gap-3">
+          <div className="absolute flex items-center gap-2 top-6 right-6 md:right-10 md:gap-3">
             <FaGithub className="text-xl transition-colors duration-700 md:text-2xl" style={{ color: slideColors[currentSlide] }} />
             <span className="font-pixel text-[8px] md:text-xs leading-tight hidden sm:block transition-colors duration-700" style={{ color: slideColors[currentSlide] }}>
               DEVELOPER<br/>RECAP<br/>LIBYAN
@@ -143,15 +171,14 @@ const slideColors = [
           </div>
         </div>
 
-        <div className="flex items-center justify-center flex-1 w-full h-full">
+        <div className="flex items-center justify-center flex-1 size-full">
           {slides[currentSlide].component}
         </div>
 
         {/* Navigation buttons */}
         <button
           onClick={prevSlide}
-          className="fixed z-20 p-6 md:p-8 transition-all duration-100 border-2 cursor-pointer bottom-8 left-8 md:bottom-12 md:left-12
-            active:scale-95 active:brightness-110 backdrop-blur-sm"
+          className="fixed z-20 p-6 transition-all duration-100 border-2 cursor-pointer md:p-8 bottom-8 left-8 md:bottom-12 md:left-12 active:scale-95 active:brightness-110 backdrop-blur-sm"
           style={{
             borderColor: slideColors[currentSlide],
             color: slideColors[currentSlide],
@@ -164,8 +191,7 @@ const slideColors = [
 
         <button
           onClick={nextSlide}
-          className="fixed z-20 p-6 md:p-8 transition-all duration-100 border-2 cursor-pointer bottom-8 right-8 md:bottom-12 md:right-12
-            active:scale-95 active:brightness-110 backdrop-blur-sm"
+          className="fixed z-20 p-6 transition-all duration-100 border-2 cursor-pointer md:p-8 bottom-8 right-8 md:bottom-12 md:right-12 active:scale-95 active:brightness-110 backdrop-blur-sm"
           style={{
             borderColor: slideColors[currentSlide],
             color: slideColors[currentSlide],
