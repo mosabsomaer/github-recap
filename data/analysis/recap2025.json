@@ -1,0 +1,783 @@
+{
+  "generatedAt": "2025-12-26T13:24:44.027Z",
+  "summary": {
+    "totalUsers": 1341,
+    "activeUsers2025": 545,
+    "totalRepos": 2041,
+    "repos2025": 2041,
+    "originalRepos2025": 1678,
+    "totalContributions": 140645,
+    "totalStars": 967,
+    "totalForks": 195,
+    "newDevsIn2025": 135
+  },
+  "topDevelopers": {
+    "byFollowers": [
+      {
+        "login": "Nelzouki22",
+        "name": "NADIR ELZOUKI",
+        "followers": 600,
+        "avatar_url": "https://avatars.githubusercontent.com/u/105569840?v=4"
+      },
+      {
+        "login": "badriyahaddad",
+        "name": "Badriya Haddad",
+        "followers": 121,
+        "avatar_url": "https://avatars.githubusercontent.com/u/92321855?v=4"
+      },
+      {
+        "login": "absholi7ly",
+        "name": "Abdualhadi khalifa",
+        "followers": 115,
+        "avatar_url": "https://avatars.githubusercontent.com/u/72062217?v=4"
+      },
+      {
+        "login": "mohamedjaouda",
+        "name": "Mohamed Jaouda",
+        "followers": 86,
+        "avatar_url": "https://avatars.githubusercontent.com/u/80783601?v=4"
+      },
+      {
+        "login": "zakariasassi",
+        "name": "Zakaria Sassi",
+        "followers": 82,
+        "avatar_url": "https://avatars.githubusercontent.com/u/9575218?v=4"
+      },
+      {
+        "login": "Altaeb",
+        "name": "Abdelfattah Altaeb",
+        "followers": 79,
+        "avatar_url": "https://avatars.githubusercontent.com/u/42971313?v=4"
+      },
+      {
+        "login": "boomeradhd",
+        "name": "Boomer",
+        "followers": 74,
+        "avatar_url": "https://avatars.githubusercontent.com/u/61156681?v=4"
+      },
+      {
+        "login": "qw46478",
+        "name": "WZ_asaeh",
+        "followers": 69,
+        "avatar_url": "https://avatars.githubusercontent.com/u/46646584?v=4"
+      },
+      {
+        "login": "mohimenly1",
+        "name": "Mohimen Tantoush",
+        "followers": 67,
+        "avatar_url": "https://avatars.githubusercontent.com/u/94185669?v=4"
+      },
+      {
+        "login": "Mahamed-Belkheir",
+        "name": null,
+        "followers": 66,
+        "avatar_url": "https://avatars.githubusercontent.com/u/56444859?v=4"
+      }
+    ],
+    "byContributions": [
+      {
+        "login": "Arjeeah",
+        "name": null,
+        "totalContributions": 5354,
+        "avatar_url": "https://avatars.githubusercontent.com/u/160641647?v=4"
+      },
+      {
+        "login": "HamoBoker",
+        "name": "Abdelrahman A Boker",
+        "totalContributions": 3742,
+        "avatar_url": "https://avatars.githubusercontent.com/u/36134966?v=4"
+      },
+      {
+        "login": "habberrih",
+        "name": "Abdullah Habberrih",
+        "totalContributions": 3550,
+        "avatar_url": "https://avatars.githubusercontent.com/u/77550038?v=4"
+      },
+      {
+        "login": "Benjaber-98",
+        "name": "Mahmoud Ben Jabir",
+        "totalContributions": 3221,
+        "avatar_url": "https://avatars.githubusercontent.com/u/32901098?v=4"
+      },
+      {
+        "login": "salemaljebaly",
+        "name": "Salem Aljebaly",
+        "totalContributions": 2836,
+        "avatar_url": "https://avatars.githubusercontent.com/u/56629923?v=4"
+      },
+      {
+        "login": "badriyahaddad",
+        "name": "Badriya Haddad",
+        "totalContributions": 2821,
+        "avatar_url": "https://avatars.githubusercontent.com/u/92321855?v=4"
+      },
+      {
+        "login": "almontasser",
+        "name": "Mahmoud Almontasser",
+        "totalContributions": 2582,
+        "avatar_url": "https://avatars.githubusercontent.com/u/19656179?v=4"
+      },
+      {
+        "login": "ZeroGDrive",
+        "name": "Ayoub Alfurjani",
+        "totalContributions": 2453,
+        "avatar_url": "https://avatars.githubusercontent.com/u/58040995?v=4"
+      },
+      {
+        "login": "Derbaaa",
+        "name": "Mustafa Derbasi",
+        "totalContributions": 2440,
+        "avatar_url": "https://avatars.githubusercontent.com/u/75489459?v=4"
+      },
+      {
+        "login": "MohamedKhX",
+        "name": "MohamedKhX",
+        "totalContributions": 2419,
+        "avatar_url": "https://avatars.githubusercontent.com/u/39223959?v=4"
+      }
+    ],
+    "byCommits": [
+      {
+        "login": "hafedEfheij",
+        "name": "Hafed Efheij",
+        "totalCommits": 609,
+        "avatar_url": "https://avatars.githubusercontent.com/u/63527271?v=4"
+      },
+      {
+        "login": "Hasan-AbouMinyar",
+        "name": "حسن أحمد أبومنيار",
+        "totalCommits": 569,
+        "avatar_url": "https://avatars.githubusercontent.com/u/121964099?v=4"
+      },
+      {
+        "login": "Yassen717",
+        "name": "Yassen Ibrahim",
+        "totalCommits": 550,
+        "avatar_url": "https://avatars.githubusercontent.com/u/135915569?v=4"
+      },
+      {
+        "login": "habberrih",
+        "name": "Abdullah Habberrih",
+        "totalCommits": 500,
+        "avatar_url": "https://avatars.githubusercontent.com/u/77550038?v=4"
+      },
+      {
+        "login": "salemaljebaly",
+        "name": "Salem Aljebaly",
+        "totalCommits": 410,
+        "avatar_url": "https://avatars.githubusercontent.com/u/56629923?v=4"
+      },
+      {
+        "login": "Wesam-1110111",
+        "name": "Mr. 1110111",
+        "totalCommits": 393,
+        "avatar_url": "https://avatars.githubusercontent.com/u/108031419?v=4"
+      },
+      {
+        "login": "torgodly",
+        "name": "Abdullah al-hajj",
+        "totalCommits": 361,
+        "avatar_url": "https://avatars.githubusercontent.com/u/57685643?v=4"
+      },
+      {
+        "login": "arousi",
+        "name": "Sanad AlArousi",
+        "totalCommits": 327,
+        "avatar_url": "https://avatars.githubusercontent.com/u/41429866?v=4"
+      },
+      {
+        "login": "IMYdev",
+        "name": "Imran Mohammed",
+        "totalCommits": 292,
+        "avatar_url": "https://avatars.githubusercontent.com/u/121319594?v=4"
+      },
+      {
+        "login": "ferasshita",
+        "name": "Feras Shita",
+        "totalCommits": 284,
+        "avatar_url": "https://avatars.githubusercontent.com/u/50782399?v=4"
+      }
+    ]
+  },
+  "topRepos": {
+    "byStars": [
+      {
+        "name": "POC-CVE-2025-24813",
+        "full_name": "absholi7ly/POC-CVE-2025-24813",
+        "stars": 180,
+        "language": "Python",
+        "description": "this repository contains an automated Proof of Concept (PoC) script for exploiting **CVE-2025-24813**, a Remote Code Execution (RCE) vulnerability in Apache Tomcat. The vulnerability allows an attacker to upload a malicious serialized payload to the server, leading to arbitrary code execution via deserialization when specific conditions are met.",
+        "commits": 5
+      },
+      {
+        "name": "crust",
+        "full_name": "almontasser/crust",
+        "stars": 56,
+        "language": "Rust",
+        "description": "A C-like programming language that is similar to Rust's syntax. Toy programming language.",
+        "commits": null
+      },
+      {
+        "name": "CVE-2025-0282-Ivanti-exploit",
+        "full_name": "absholi7ly/CVE-2025-0282-Ivanti-exploit",
+        "stars": 51,
+        "language": "Python",
+        "description": "CVE-2025-0282 is a critical vulnerability found in Ivanti Connect Secure, allowing Remote Command Execution (RCE) through a buffer overflow exploit.",
+        "commits": 7
+      },
+      {
+        "name": "OpenFPS",
+        "full_name": "IMYdev/OpenFPS",
+        "stars": 48,
+        "language": "GLSL",
+        "description": "Experimental First Person Shooter Made With Godot 4",
+        "commits": 37
+      },
+      {
+        "name": "Html2Media",
+        "full_name": "torgodly/Html2Media",
+        "stars": 45,
+        "language": "JavaScript",
+        "description": "Html2Media is a Laravel package for converting HTML to PDFs with options to download or print. It supports configurable settings like file name, orientation, margins, and integrates with Filament actions for dynamic content rendering. Perfect for documents, invoices, and reports, it simplifies creating high-quality, customizable outputs.",
+        "commits": 21
+      },
+      {
+        "name": "ZeroHuntAI",
+        "full_name": "absholi7ly/ZeroHuntAI",
+        "stars": 21,
+        "language": "Python",
+        "description": "ZeroHuntAI is an advanced source code vulnerability scanner designed to detect potential vulnerabilities in your codebase. It combines static code analysis with pattern matching and AI evaluation to identify security issues before they can be exploited.",
+        "commits": 9
+      },
+      {
+        "name": "CosaNostra-HTTP-Botnet",
+        "full_name": "moneermasoud/CosaNostra-HTTP-Botnet",
+        "stars": 20,
+        "language": "HTML",
+        "description": "HTTPBotNet",
+        "commits": 8
+      },
+      {
+        "name": "stk-mcp",
+        "full_name": "alti3/stk-mcp",
+        "stars": 20,
+        "language": "Python",
+        "description": "An MCP server allowing LLMs to interact with Ansys/AGI STK - Digital Mission Engineering Software",
+        "commits": 15
+      },
+      {
+        "name": "laravel-moamalat-pay",
+        "full_name": "alifaraun/laravel-moamalat-pay",
+        "stars": 17,
+        "language": "PHP",
+        "description": "Laravel moamalat pay package",
+        "commits": 96
+      },
+      {
+        "name": "TomcatKiller-CVE-2025-31650",
+        "full_name": "absholi7ly/TomcatKiller-CVE-2025-31650",
+        "stars": 17,
+        "language": "Python",
+        "description": "A tool designed to detect the vulnerability **CVE-2025-31650** in Apache Tomcat (versions 10.1.10 to 10.1.39)",
+        "commits": 4
+      }
+    ],
+    "byForks": [
+      {
+        "name": "POC-CVE-2025-24813",
+        "full_name": "absholi7ly/POC-CVE-2025-24813",
+        "forks": 43,
+        "language": "Python",
+        "description": "his repository contains an automated Proof of Concept (PoC) script for exploiting **CVE-2025-24813**, a Remote Code Execution (RCE) vulnerability in Apache Tomcat. The vulnerability allows an attacker to upload a malicious serialized payload to the server, leading to arbitrary code execution via deserialization when specific conditions are met.",
+        "commits": 5
+      },
+      {
+        "name": "Html2Media",
+        "full_name": "torgodly/Html2Media",
+        "forks": 15,
+        "language": "JavaScript",
+        "description": "Html2Media is a Laravel package for converting HTML to PDFs with options to download or print. It supports configurable settings like file name, orientation, margins, and integrates with Filament actions for dynamic content rendering. Perfect for documents, invoices, and reports, it simplifies creating high-quality, customizable outputs.",
+        "commits": 21
+      },
+      {
+        "name": "CosaNostra-HTTP-Botnet",
+        "full_name": "moneermasoud/CosaNostra-HTTP-Botnet",
+        "forks": 14,
+        "language": "HTML",
+        "description": "HTTPBotNet",
+        "commits": 8
+      },
+      {
+        "name": "CVE-2025-0282-Ivanti-exploit",
+        "full_name": "absholi7ly/CVE-2025-0282-Ivanti-exploit",
+        "forks": 13,
+        "language": "Python",
+        "description": "CVE-2025-0282 is a critical vulnerability found in Ivanti Connect Secure, allowing Remote Command Execution (RCE) through a buffer overflow exploit.",
+        "commits": 7
+      },
+      {
+        "name": "shu-cse351-s25-intro-to-github-github-starter-course",
+        "full_name": "shu-cse/shu-cse351-s25-intro-to-github-github-starter-course",
+        "forks": 12,
+        "language": null,
+        "description": "shu-cse351-s25-intro-to-github-github-starter-course created by GitHub Classroom",
+        "commits": 1
+      },
+      {
+        "name": "ZeroHuntAI",
+        "full_name": "absholi7ly/ZeroHuntAI",
+        "forks": 5,
+        "language": "Python",
+        "description": "ZeroHuntAI is an advanced source code vulnerability scanner designed to detect potential vulnerabilities in your codebase. It combines static code analysis with pattern matching and AI evaluation to identify security issues before they can be exploited.",
+        "commits": 9
+      },
+      {
+        "name": "TomcatKiller-CVE-2025-31650",
+        "full_name": "absholi7ly/TomcatKiller-CVE-2025-31650",
+        "forks": 5,
+        "language": "Python",
+        "description": "A tool designed to detect the vulnerability **CVE-2025-31650** in Apache Tomcat (versions 10.1.10 to 10.1.39)",
+        "commits": 4
+      },
+      {
+        "name": "Nafaqa",
+        "full_name": "MuradAlBarki/Nafaqa",
+        "forks": 4,
+        "language": "PHP",
+        "description": "Advanced Software Engineering Final Project",
+        "commits": 36
+      },
+      {
+        "name": "reservoirflow",
+        "full_name": "hiesabx/reservoirflow",
+        "forks": 3,
+        "language": "Python",
+        "description": "ReservoirFlow: Reservoir Simulation and Engineering Library in Python",
+        "commits": 301
+      },
+      {
+        "name": "laravel-tlync",
+        "full_name": "Elshaden/laravel-tlync",
+        "forks": 3,
+        "language": "PHP",
+        "description": "Tlync SDK for Laravel",
+        "commits": 48
+      }
+    ],
+    "byCommits": [
+      {
+        "name": "codewars-leetCode",
+        "full_name": "SofianSaleh/codewars-leetCode",
+        "commits": 2486,
+        "language": "JavaScript",
+        "description": "All my solutions for codewars problems",
+        "stars": 0
+      },
+      {
+        "name": "alalalalalalalalal.github.io",
+        "full_name": "AldeabAhmed/alalalalalalalalal.github.io",
+        "commits": 650,
+        "language": null,
+        "description": null,
+        "stars": 0
+      },
+      {
+        "name": "mo3jam",
+        "full_name": "w1ty/mo3jam",
+        "commits": 452,
+        "language": "SCSS",
+        "description": null,
+        "stars": 0
+      },
+      {
+        "name": "test",
+        "full_name": "ferasshita/test",
+        "commits": 366,
+        "language": null,
+        "description": null,
+        "stars": 0
+      },
+      {
+        "name": "dotfiles",
+        "full_name": "alma3lol/dotfiles",
+        "commits": 319,
+        "language": "Lua",
+        "description": "My dotfiles",
+        "stars": 0
+      },
+      {
+        "name": "reservoirflow",
+        "full_name": "hiesabx/reservoirflow",
+        "commits": 301,
+        "language": "Python",
+        "description": "ReservoirFlow: Reservoir Simulation and Engineering Library in Python",
+        "stars": 5
+      },
+      {
+        "name": "minara",
+        "full_name": "habberrih/minara",
+        "commits": 298,
+        "language": "TypeScript",
+        "description": "Modular NestJS starter for multi-tenant SaaS. Includes JWT auth, organization memberships, tenant-scoped Prisma access.",
+        "stars": 0
+      },
+      {
+        "name": "mazexpress-aura",
+        "full_name": "CodeToRelax/mazexpress-aura",
+        "commits": 295,
+        "language": "TypeScript",
+        "description": null,
+        "stars": 0
+      },
+      {
+        "name": "azmialwerfalli",
+        "full_name": "azmialwerfalli/azmialwerfalli",
+        "commits": 287,
+        "language": null,
+        "description": "Config files for my GitHub profile.",
+        "stars": 3
+      },
+      {
+        "name": "portfolio",
+        "full_name": "salemaljebaly/portfolio",
+        "commits": 254,
+        "language": "TypeScript",
+        "description": null,
+        "stars": 0
+      }
+    ]
+  },
+  "languages": {
+    "distribution": {
+      "HTML": 1192217250,
+      "C": 520874957,
+      "Python": 419722534,
+      "TypeScript": 395405657,
+      "JavaScript": 363038553,
+      "PHP": 200528235,
+      "Jupyter Notebook": 159119999,
+      "Java": 131029283,
+      "Dart": 115280190,
+      "CSS": 83695993,
+      "C++": 72486966,
+      "Go": 46738480,
+      "C#": 30678858,
+      "Clojure": 28479681,
+      "Blade": 27758939,
+      "Handlebars": 24549772,
+      "Vue": 20958465,
+      "SCSS": 20433910,
+      "Rust": 11546728,
+      "Assembly": 9886855,
+      "HCL": 7437489,
+      "MDX": 4754938,
+      "Shell": 4486195,
+      "Cuda": 4424663,
+      "Kotlin": 3721017,
+      "Cython": 3405661,
+      "Objective-C++": 2873946,
+      "CMake": 2247739,
+      "Astro": 2110360,
+      "Less": 2018270,
+      "Swift": 1889637,
+      "Makefile": 1794323,
+      "Objective-C": 1709518,
+      "Batchfile": 1657584,
+      "Lua": 1558893,
+      "GLSL": 1331485,
+      "Tcl": 1199199,
+      "Starlark": 821335,
+      "Tree-sitter Query": 786397,
+      "Perl": 671845,
+      "TeX": 610300,
+      "CUE": 410299,
+      "Hack": 407503,
+      "Ruby": 388883,
+      "Groovy": 388783,
+      "Rich Text Format": 351284,
+      "Luau": 323758,
+      "EJS": 310984,
+      "Dockerfile": 307901,
+      "PowerShell": 252258,
+      "Svelte": 185367,
+      "PLpgSQL": 172870,
+      "Visual Basic .NET": 163417,
+      "Stylus": 138000,
+      "ASP.NET": 137958,
+      "Sass": 116860,
+      "MATLAB": 116048,
+      "CoffeeScript": 114641,
+      "Nix": 109707,
+      "Jinja": 107677,
+      "Solidity": 106312,
+      "Vim Script": 96779,
+      "GDScript": 95464,
+      "Yacc": 92226,
+      "TSQL": 91496,
+      "SmPL": 69315,
+      "Roff": 58029,
+      "XSLT": 55582,
+      "Nunjucks": 53899,
+      "Smarty": 49824,
+      "Processing": 42848,
+      "Fortran": 39766,
+      "Linker Script": 32230,
+      "ANTLR": 31354,
+      "PEG.js": 29143,
+      "Elixir": 25588,
+      "Emacs Lisp": 23053,
+      "NSIS": 22693,
+      "Sage": 19236,
+      "Just": 18372,
+      "Nushell": 15755,
+      "Verilog": 14154,
+      "Scheme": 8971,
+      "Vim Snippet": 7741,
+      "F#": 6700,
+      "Typst": 5325,
+      "Gnuplot": 5100,
+      "Meson": 4589,
+      "Inno Setup": 4031,
+      "Classic ASP": 3345,
+      "Mako": 2962,
+      "Mermaid": 2217,
+      "Elvish": 2075,
+      "M4": 1023,
+      "Mustache": 872,
+      "templ": 621,
+      "Procfile": 265,
+      "Pug": 175,
+      "Twig": 134,
+      "Pawn": 113
+    },
+    "topLanguages": [
+      {
+        "language": "HTML",
+        "count": 1192217250,
+        "percentage": 30
+      },
+      {
+        "language": "C",
+        "count": 520874957,
+        "percentage": 13
+      },
+      {
+        "language": "Python",
+        "count": 419722534,
+        "percentage": 11
+      },
+      {
+        "language": "TypeScript",
+        "count": 395405657,
+        "percentage": 10
+      },
+      {
+        "language": "JavaScript",
+        "count": 363038553,
+        "percentage": 9
+      },
+      {
+        "language": "PHP",
+        "count": 200528235,
+        "percentage": 5
+      },
+      {
+        "language": "Jupyter Notebook",
+        "count": 159119999,
+        "percentage": 4
+      },
+      {
+        "language": "Java",
+        "count": 131029283,
+        "percentage": 3
+      },
+      {
+        "language": "Dart",
+        "count": 115280190,
+        "percentage": 3
+      },
+      {
+        "language": "CSS",
+        "count": 83695993,
+        "percentage": 2
+      }
+    ],
+    "languageOfYear": "HTML"
+  },
+  "activity": {
+    "weekdayDistribution": {
+      "Sunday": 22383,
+      "Monday": 21254,
+      "Tuesday": 22599,
+      "Wednesday": 23365,
+      "Thursday": 20627,
+      "Friday": 12816,
+      "Saturday": 18201
+    },
+    "peakDay": "Wednesday",
+    "peakDayCount": 23365,
+    "monthlyDistribution": {
+      "2025-01": 11464,
+      "2025-02": 10888,
+      "2025-03": 10925,
+      "2025-04": 11324,
+      "2025-05": 12137,
+      "2025-06": 12911,
+      "2025-07": 12213,
+      "2025-08": 13714,
+      "2025-09": 14706,
+      "2025-10": 13901,
+      "2025-11": 12868,
+      "2025-12": 4194
+    },
+    "peakMonth": "2025-09",
+    "totalContributionDays": 24443
+  },
+  "funStats": {
+    "mostProductiveMonth": "2025-09",
+    "epicComparisons": [
+      "140,645 contributions = 4.4× building TypeScript from scratch",
+      "That's 2.3× the entire VS Code repository",
+      "14% of the Linux kernel's entire commit history",
+      "385 contributions per day on average"
+    ]
+  },
+  "interestingFacts": {
+    "leastContributedDay": {
+      "date": "2025-06-06",
+      "contributions": 158
+    },
+    "mostContributionsInOneDay": {
+      "date": "2025-09-10",
+      "contributions": 886
+    }
+  },
+  "charts": {
+    "languageDonut": [
+      {
+        "language": "HTML",
+        "percentage": 30
+      },
+      {
+        "language": "C",
+        "percentage": 13
+      },
+      {
+        "language": "Python",
+        "percentage": 11
+      },
+      {
+        "language": "TypeScript",
+        "percentage": 10
+      },
+      {
+        "language": "JavaScript",
+        "percentage": 9
+      },
+      {
+        "language": "PHP",
+        "percentage": 5
+      },
+      {
+        "language": "Jupyter Notebook",
+        "percentage": 4
+      },
+      {
+        "language": "Java",
+        "percentage": 3
+      },
+      {
+        "language": "Dart",
+        "percentage": 3
+      },
+      {
+        "language": "CSS",
+        "percentage": 2
+      },
+      {
+        "language": "Other",
+        "percentage": 9
+      }
+    ],
+    "weeklyBar": [
+      {
+        "day": "Sunday",
+        "contributions": 22383
+      },
+      {
+        "day": "Monday",
+        "contributions": 21254
+      },
+      {
+        "day": "Tuesday",
+        "contributions": 22599
+      },
+      {
+        "day": "Wednesday",
+        "contributions": 23365
+      },
+      {
+        "day": "Thursday",
+        "contributions": 20627
+      },
+      {
+        "day": "Friday",
+        "contributions": 12816
+      },
+      {
+        "day": "Saturday",
+        "contributions": 18201
+      }
+    ],
+    "monthlyLine": [
+      {
+        "month": "Jan",
+        "contributions": 11464
+      },
+      {
+        "month": "Feb",
+        "contributions": 10888
+      },
+      {
+        "month": "Mar",
+        "contributions": 10925
+      },
+      {
+        "month": "Apr",
+        "contributions": 11324
+      },
+      {
+        "month": "May",
+        "contributions": 12137
+      },
+      {
+        "month": "Jun",
+        "contributions": 12911
+      },
+      {
+        "month": "Jul",
+        "contributions": 12213
+      },
+      {
+        "month": "Aug",
+        "contributions": 13714
+      },
+      {
+        "month": "Sep",
+        "contributions": 14706
+      },
+      {
+        "month": "Oct",
+        "contributions": 13901
+      },
+      {
+        "month": "Nov",
+        "contributions": 12868
+      },
+      {
+        "month": "Dec",
+        "contributions": 4194
+      }
+    ]
+  }
+}

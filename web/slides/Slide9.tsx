@@ -24,7 +24,7 @@ export default function Slide9({ color }: { color: string }) {
             style={{ backgroundColor: color, boxShadow: `0 0 15px ${color}` }}
         ></div>
         
-        <p className="text-xs md:text-lg font-['Press_Start_2P'] text-slate-400 animate-pulse">
+        <p className="text-xs md:text-lg font-pixel text-slate-400 animate-pulse">
           THE CODE MACHINES
         </p>
       </div>

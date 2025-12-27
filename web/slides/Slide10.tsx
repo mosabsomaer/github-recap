@@ -12,7 +12,7 @@ export default function Slide10({ color }: { color: string }) {
           return (
             <div key={dev.login} className="flex items-center w-full gap-4 group">
               <div 
-                className="w-8 text-right font-['Press_Start_2P'] text-[10px] md:text-xs"
+                className="w-8 text-right font-pixel text-[10px] md:text-xs"
                 style={{ color: index < 3 ? color : '#64748b' }}
               >
                 #{index + 1}
@@ -38,7 +38,7 @@ export default function Slide10({ color }: { color: string }) {
                         {dev.login}
                     </a>
                     <span 
-                        className="font-['Press_Start_2P'] text-[8px] md:text-[10px]"
+                        className="font-pixel text-[8px] md:text-[10px]"
                         style={{ color: color }}
                     >
                         {dev.totalContributions.toLocaleString()}

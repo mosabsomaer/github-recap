@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import { FaChevronLeft, FaChevronRight, FaCode, FaGithub, FaStar } from 'react-icons/fa';
+import { Bs8CircleFill } from "react-icons/bs";
+import { CgUserList } from "react-icons/cg";
+import { FaChevronLeft, FaChevronRight, FaCode, FaGithub } from 'react-icons/fa';
 import { LuBoxes } from "react-icons/lu";
-import { MdLeaderboard, MdOutlineSubtitles } from "react-icons/md";
-import { RiBubbleChartFill } from "react-icons/ri";
+import { MdOutlineLeaderboard, MdOutlineSubtitles } from "react-icons/md";
+import { RiBubbleChartFill, RiPlayCircleLine } from "react-icons/ri";
 import Slide1 from './slides/Slide1';
 import Slide10 from './slides/Slide10';
 import Slide11 from './slides/Slide11';
+import Slide12 from './slides/Slide12';
 import Slide2 from './slides/Slide2';
 import Slide3 from './slides/Slide3';
 import Slide4 from './slides/Slide4';
@@ -20,7 +23,7 @@ function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const totalSlides = 11;
+  const totalSlides = 12;
 
   useEffect(() => {
     if (videoRef.current) {
@@ -66,25 +69,28 @@ const slideColors = [
   '#FFBE0B', // Yellow - Slide 4 (chart)
   '#00F5D4', // Mint - Slide 5 (title)
   '#00F5D4', // Mint - Slide 6 (chart)
-  '#O096FF', // Blue - Slide 7
+  '#FF006E', // Pink - Slide 7
   '#FF006E', // Pink - Slide 8
   '#FFBE0B', // Yellow - Slide 9
   '#FFBE0B', // Yellow - Slide 10
-  '#00F5D4', // Mint - Slide 11
+  '#FF006E', // Mint - Slide 11
+  '#D946EF', // Purple - Slide 12
 ];
 
   const slides = [
-    { component: <Slide1 color={slideColors[currentSlide]} />, icon: FaStar },
+    { component: <Slide1 color={slideColors[currentSlide]} />, icon: RiPlayCircleLine },
     { component: <Slide2 color={slideColors[currentSlide]}/>, icon: FaCode },
     { component: <Slide3 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
     { component: <Slide4 color={slideColors[currentSlide]}/>, icon: RiBubbleChartFill },
     { component: <Slide5 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
     { component: <Slide6 color={slideColors[currentSlide]}/>, icon: LuBoxes },
     { component: <Slide7 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
-    { component: <Slide8 color={slideColors[currentSlide]}/>, icon: MdLeaderboard },
+    { component: <Slide8 color={slideColors[currentSlide]}/>, icon: MdOutlineLeaderboard },
     { component: <Slide9 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
-    { component: <Slide10 color={slideColors[currentSlide]}/>, icon: RiBubbleChartFill },
+    { component: <Slide10 color={slideColors[currentSlide]}/>, icon: CgUserList },
     { component: <Slide11 color={slideColors[currentSlide]}/>, icon: LuBoxes },
+    { component: <Slide12 color={slideColors[currentSlide]}/>, icon: Bs8CircleFill },
+
   ];
 
   const nextSlide = () => {

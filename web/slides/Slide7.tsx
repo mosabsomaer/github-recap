@@ -21,7 +21,7 @@ export default function Slide7({ color }: { color: string }) {
         <div className="flex items-center justify-center gap-4 mt-8">
             <div className="h-0.5 w-12 md:w-24 bg-current" style={{ color }}></div>
             <h2 
-                className="text-lg md:text-2xl font-['Press_Start_2P'] tracking-widest uppercase"
+                className="text-lg md:text-2xl font-pixel tracking-widest uppercase"
                 style={{ color: '#fff' }}
             >
             Of The Year
