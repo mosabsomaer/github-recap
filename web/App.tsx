@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+import { BiFork } from "react-icons/bi";
 import { Bs8CircleFill } from "react-icons/bs";
 import { CgUserList } from "react-icons/cg";
-import { FaChevronLeft, FaChevronRight, FaCode, FaGithub } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaCode, FaGithub, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 import { LuBoxes } from "react-icons/lu";
 import { MdOutlineLeaderboard, MdOutlineSubtitles } from "react-icons/md";
 import { RiBubbleChartFill, RiPlayCircleLine } from "react-icons/ri";
@@ -17,11 +18,12 @@ import Slide6 from './slides/Slide6';
 import Slide7 from './slides/Slide7';
 import Slide8 from './slides/Slide8';
 import Slide9 from './slides/Slide9';
-
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const bgMusicRef = useRef<HTMLAudioElement | null>(null);
 
   const totalSlides = 12;
 
@@ -31,7 +33,36 @@ function App() {
     }
     audioRef.current = new Audio('/select-button-ui-395763.mp3');
     audioRef.current.volume = 0.5;
+
+    // Initialize background music
+    bgMusicRef.current = new Audio('/background music.mov');
+    bgMusicRef.current.loop = true;
+    bgMusicRef.current.volume = 0.3;
+
+    return () => {
+      if (bgMusicRef.current) {
+        bgMusicRef.current.pause();
+        bgMusicRef.current = null;
+      }
+    };
   }, []);
+
+  // Update background music volume when muted state changes
+  useEffect(() => {
+    if (bgMusicRef.current) {
+      bgMusicRef.current.volume = isMuted ? 0 : 0.3;
+    }
+  }, [isMuted]);
+
+  const startBackgroundMusic = () => {
+    if (bgMusicRef.current && bgMusicRef.current.paused) {
+      bgMusicRef.current.play().catch(err => console.log('Background music play failed:', err));
+    }
+  };
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
 
   // Keyboard navigation
   useEffect(() => {
@@ -41,11 +72,17 @@ function App() {
           audioRef.current.currentTime = 0;
           audioRef.current.play().catch(err => console.log('Audio play failed:', err));
         }
+        if (bgMusicRef.current && bgMusicRef.current.paused) {
+          bgMusicRef.current.play().catch(err => console.log('Background music play failed:', err));
+        }
         setCurrentSlide((prev) => (prev + 1) % totalSlides);
       } else if (e.key === 'ArrowLeft') {
         if (audioRef.current) {
           audioRef.current.currentTime = 0;
           audioRef.current.play().catch(err => console.log('Audio play failed:', err));
+        }
+        if (bgMusicRef.current && bgMusicRef.current.paused) {
+          bgMusicRef.current.play().catch(err => console.log('Background music play failed:', err));
         }
         setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
       }
@@ -88,23 +125,26 @@ const slideColors = [
     { component: <Slide8 color={slideColors[currentSlide]}/>, icon: MdOutlineLeaderboard },
     { component: <Slide9 color={slideColors[currentSlide]}/>, icon: MdOutlineSubtitles },
     { component: <Slide10 color={slideColors[currentSlide]}/>, icon: CgUserList },
-    { component: <Slide11 color={slideColors[currentSlide]}/>, icon: LuBoxes },
+    { component: <Slide11 color={slideColors[currentSlide]}/>, icon: BiFork },
     { component: <Slide12 color={slideColors[currentSlide]}/>, icon: Bs8CircleFill },
 
   ];
 
   const nextSlide = () => {
     playSound();
+    startBackgroundMusic();
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
     playSound();
+    startBackgroundMusic();
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToSlide = (index: number) => {
     playSound();
+    startBackgroundMusic();
     setCurrentSlide(index);
   };
 
@@ -131,6 +171,26 @@ const slideColors = [
       <div className="absolute inset-0 z-10 flex flex-col">
         {/* Header with slides in center and branding top-right */}
         <div className="relative w-full py-6">
+<button
+  onClick={() => {
+    startBackgroundMusic();
+    toggleMute();
+  }}
+  /* Added flex, items-center, and justify-center. Adjusted padding to p-1 */
+  className="fixed flex items-center justify-center p-1 transition-all duration-100 border-2 cursor-pointer size-10 top-9 left-9 active:scale-95 backdrop-blur-sm"
+  style={{
+    borderColor: slideColors[currentSlide],
+    color: slideColors[currentSlide],
+    backgroundColor: `${slideColors[currentSlide]}15`,
+  }}
+>
+  {isMuted ? (
+    <FaVolumeMute className="text-lg md:text-xl" />
+  ) : (
+    <FaVolumeUp className="text-lg md:text-xl" />
+  )}
+</button>
+
           {/* Slide indicators - centered */}
           <div className="absolute flex items-center gap-3 -translate-x-1/2 left-1/2 top-6 md:gap-4">
             {slides.map((slide, index) => {

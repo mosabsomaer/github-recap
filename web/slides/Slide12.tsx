@@ -88,7 +88,7 @@ export default function Slide12({ color }: {
             className=" text-[10px] md:text-xs font-pixel animate-pulse tracking-wider"
             style={{ color: '#fff' }}
         >
-            UNCOVER LIBYAN BIOS
+            UNCOVER RANDOM LIBYAN BIOS
         </p>
       </div>
 

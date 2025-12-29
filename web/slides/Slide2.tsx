@@ -10,7 +10,7 @@ export default function Slide2({ color }: { color: string }) {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center max-w-5xl px-6 gap-12">
+    <div className="relative flex flex-col items-center justify-center max-w-5xl gap-12 px-6">
       <div className="text-center shrink-0">
         <h2
             className="text-3xl md:text-5xl font-['Orbitron'] font-bold tracking-wider mb-3 drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]"
@@ -27,14 +27,14 @@ export default function Slide2({ color }: { color: string }) {
       <div className="flex flex-col items-stretch justify-center w-full gap-8 md:gap-10 md:flex-row">
         {/* Total Repos */}
         <div
-            className="flex flex-col items-center justify-center flex-1 p-10 md:p-12 transition-all duration-500 border-2 bg-black/40 backdrop-blur-md rounded-xl group"
+            className="flex flex-col items-center justify-center flex-1 p-10 transition-all duration-500 border-2 md:p-12 bg-black/40 backdrop-blur-md rounded-xl group"
             style={{
                 borderColor: `${color}40`,
                 boxShadow: `0 0 30px ${color}20, inset 0 0 20px ${color}10`
             }}
         >
           <span
-            className="text-6xl md:text-8xl font-['Orbitron'] font-black drop-shadow-lg transition-transform group-hover:scale-110 duration-300"
+            className="text-6xl md:text-8xl font-['Orbitron'] font-black drop-shadow-lg transition-transform scale-110"
             style={{
                 color: 'transparent',
                 WebkitTextStroke: `2px ${color}`,
@@ -50,14 +50,14 @@ export default function Slide2({ color }: { color: string }) {
 
         {/* Total Contributions */}
         <div
-            className="flex flex-col items-center justify-center flex-1 p-10 md:p-12 transition-all duration-500 border-2 bg-black/40 backdrop-blur-md rounded-xl group"
+            className="flex flex-col items-center justify-center flex-1 p-10 transition-all duration-500 border-2 md:p-12 bg-black/40 backdrop-blur-md rounded-xl group"
             style={{
                 borderColor: `${color}40`,
                 boxShadow: `0 0 30px ${color}20, inset 0 0 20px ${color}10`
             }}
         >
           <span
-            className="text-5xl md:text-7xl font-['Orbitron'] font-black drop-shadow-lg transition-transform group-hover:scale-110 duration-300"
+            className="text-5xl md:text-7xl font-['Orbitron'] font-black drop-shadow-lg transition-transform scale-110"
             style={{
                 color: color,
                 textShadow: `0 0 30px ${color}80`
