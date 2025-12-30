@@ -6,6 +6,7 @@ import { FaChevronLeft, FaChevronRight, FaCode, FaGithub, FaVolumeMute, FaVolume
 import { LuBoxes } from "react-icons/lu";
 import { MdOutlineLeaderboard, MdOutlineSubtitles } from "react-icons/md";
 import { RiBubbleChartFill, RiPlayCircleLine } from "react-icons/ri";
+import LoadingScreen from './components/LoadingScreen';
 import Slide1 from './slides/Slide1';
 import Slide10 from './slides/Slide10';
 import Slide11 from './slides/Slide11';
@@ -37,7 +38,7 @@ function App() {
     // Initialize background music
     bgMusicRef.current = new Audio('/background music.opus');
     bgMusicRef.current.loop = true;
-    bgMusicRef.current.volume = 0.3;
+    bgMusicRef.current.volume = 0.05;
 
     return () => {
       if (bgMusicRef.current) {
@@ -50,7 +51,7 @@ function App() {
   // Update background music volume when muted state changes
   useEffect(() => {
     if (bgMusicRef.current) {
-      bgMusicRef.current.volume = isMuted ? 0 : 0.3;
+      bgMusicRef.current.volume = isMuted ? 0 : 0.05;
     }
   }, [isMuted]);
 
@@ -150,6 +151,7 @@ const slideColors = [
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-neutral-950">
+      <LoadingScreen />
       <div className="absolute inset-0 z-0 overflow-hidden opacity-20">
         <video
           ref={videoRef}
