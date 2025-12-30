@@ -35,7 +35,7 @@ function App() {
     audioRef.current.volume = 0.5;
 
     // Initialize background music
-    bgMusicRef.current = new Audio('/background music.mov');
+    bgMusicRef.current = new Audio('/background music.opus');
     bgMusicRef.current.loop = true;
     bgMusicRef.current.volume = 0.3;
 
